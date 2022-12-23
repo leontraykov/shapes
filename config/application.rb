@@ -6,8 +6,8 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Shsh
-  class Application < Rails::Application
+module Shapes
+  class Shapes < Rails::Application
     if defined?(FactoryBotRails)
       initializer after: "factory_bot.set_factory_paths" do
         require 'spree/testing_support'
