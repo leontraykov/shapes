@@ -1,0 +1,80 @@
+<div class="ft-block">
+  <section class="for-them">
+
+    <div class="ft-title">
+      <h1 class="ft-title">
+        <%= I18n.t("shapes_for_them_title") %>
+      </h1>
+    </div>
+
+    <div class="ft-photos">
+    <div id="image-wrapper" style="display: none;">
+  <!-- Изображение, которое будет увеличиваться/уменьшаться -->
+  <%= image_tag("for_them/soccer1.jpg", :id => "enlarged-image", :class => "enlargeable") %>
+</div>
+
+      <div class="responsive flex-block">
+        <div class="gallery">
+          <%= image_tag("for_them/soccer1.jpg", :onclick => "enlargeImage(this)") %>
+          <div class="desc">Shapes supports children sports</div>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <%= image_tag("for_them/soccer2.jpg") %>
+          <div class="desc">Next generation</div>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <%= image_tag("for_them/soccer3.jpg") %>
+          <div class="desc">Little futboleros</div>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <%= image_tag("for_them/soccer4.jpg") %>
+          <div class="desc">We want better future For Them</div>
+        </div>
+      </div>
+    </div>
+
+    <span class="ft-subtitle">
+      <p class="subtitle">
+        <%= I18n.t("shapes_for_them") %>
+      </p>
+    </span>
+
+
+  </section>
+</div>
+
+<script type="text/javascript">
+  // Функция для увеличения/уменьшения изображения
+  function toggleImageSize(image) {
+    if (image.style.width === "200%") {
+// Если изображение уже увеличено, то уменьшаем его
+image.style.width = "100%";
+// Убираем изображение на передний план
+image.style.zIndex = "0";
+} else {
+// Иначе увеличиваем изображение
+image.style.width = "200%";
+// Помещаем изображение на передний план
+image.style.zIndex = "1";
+}
+}
+
+// Получаем все изизображения с классом "enlargeable"
+var images = document.getElementsByClassName("enlargeable");
+// Добавляем обработчик события клика на каждое изображение
+for (var i = 0; i < images.length; i++) {
+images[i].addEventListener("click", function() {
+// При клике на изображение меняем его размер и помещаем на передний план
+toggleImageSize(this);
+});
+}
+</script>

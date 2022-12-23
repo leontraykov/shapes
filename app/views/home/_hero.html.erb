@@ -1,0 +1,43 @@
+<div class="parallax-section">
+  <section class="hero">
+    <div class="hero__container" id="hero__container" data-parallax="scroll" data-image-src="images/banner1.jpg">
+      <div class="hero__message">
+        <h1 class="hero-title heading" id="heading" title="<%= I18n.t("learn_more") %>">
+          <%= I18n.t("title_full") %>
+        </h1>
+
+        <div class="hero__container">
+          <p class="subtitle hidden-text hidden">
+            <%= I18n.t("about_us") %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  // Получаем элементы заголовка и скрытого текста
+  var heading = document.querySelector(".heading");
+  var hiddenText = document.querySelector(".hidden-text");
+
+  // Добавляем обработчик события клика на заголовке
+  heading.addEventListener("click", function() {
+    // Переключаем класс `hidden` у скрытого текста
+        hiddenText.classList.toggle("hidden");
+
+  });
+});
+function parallax() {
+  var section = document.querySelector('.parallax-section');
+  var y = window.pageYOffset;
+  var height = section.offsetHeight;
+  if (y < height) {
+    section.style.backgroundPosition = '50% ' + (50 + y/10) + '%';
+  }
+}
+
+window.addEventListener('scroll', parallax);
+
+</script>

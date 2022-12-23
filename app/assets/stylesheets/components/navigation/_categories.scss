@@ -1,0 +1,56 @@
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+
+    >li {
+      display: flex;
+      list-style-type: none;
+      margin: 0 1rem;
+      padding: 0;
+
+      &.current {
+        @extend %current-state-color-accent;
+      }
+    }
+  }
+
+  a {
+    padding: 8px 24px;
+    height: fit-content;
+
+    @include tablet {
+      font-size: $font-size-base;
+    }
+  }
+
+  a:link {
+    background-color: #eed9dd;
+    text-decoration: none;
+    border: solid 1px #772431;
+    border-radius: 10px;
+  }
+
+  a:visited {
+    color: #772431;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #772431;
+    background-color: #DBabb3;
+    transition: all ease .6s;
+  }
+
+  a:active {
+    color: #772431;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+}
