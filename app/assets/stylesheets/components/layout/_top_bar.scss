@@ -1,45 +1,122 @@
-.top-bar {
-  background-color: #DBABB3;
-  align-items: center;
+// .top-bar {
+//   background-image: linear-gradient(to right,white, #DBABB3);
+//   align-items: center;
+//   display: flex;
+//   flex-wrap: nowrap;
+//   justify-content: space-between;
+//   padding: 1rem;
+
+//   @include desktop {
+//     flex-wrap: nowrap;
+//     justify-content: flex-end;
+//   }
+
+//   .logo {
+//     margin: 0 0;
+//     order: 1;
+
+//     a {
+//       display: flex;
+//     }
+
+//     img {
+//       width: 300px;
+
+//       @media (max-width: 600px) {
+//         width: 180px;
+//       }
+//       @media (max-width: 500px) {
+//         width: 90px;
+//       }
+//     }
+//   }
+
+//   &__search {
+//     flex: 0 0 100%;
+//     margin-top: 10px;
+//     order: 4;
+
+//     @include desktop {
+//       flex: 1 0 auto;
+//       margin: 0 2rem;
+//       order: 2;
+//     }
+//   }
+
+//   .auth-link {
+//     order: 2;
+//   }
+
+//   .cart-link {
+//     order: 3;
+//   }
+// }
+
+
+.logo {
+  width: auto;
+  // margin: 0 0;
+
+  img {
+    width: 300px;
+
+    @media (max-width: 600px) {
+      width: 180px;
+    }
+    @media (max-width: 500px) {
+      width: 90px;
+    }
+  }
+}
+
+.tt {
+  background-image: linear-gradient(to right,white, #DBABB3);
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row nowrap;
+}
+
+.cont-part {
+  width: auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.row {
+  display: flex;
+  // justify-content: flex-start;
+}
+
+.bt-line {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.infoe {
+  border: 0;
+  background-color: transparent;
+}
+
+.row {
+  display: flex;
   justify-content: space-between;
-  padding: 1rem 3rem;
+}
 
-  @include desktop {
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-  }
+.row > div {
+  flex: 1;
+}
+.account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
 
-  .logo {
-    order: 1;
+.cart {
+  display: flex;
+  justify-content: center;
+}
 
-    a {
-      display: flex;
-    }
-
-    img {
-      width: 200px;
-    }
-  }
-
-  &__search {
-    flex: 0 0 100%;
-    margin-top: 10px;
-    order: 4;
-
-    @include desktop {
-      flex: 1 0 auto;
-      margin: 0 2rem;
-      order: 2;
-    }
-  }
-
-  .auth-link {
-    order: 2;
-  }
-
-  .cart-link {
-    order: 3;
-  }
+.searchbbar {
+  display: flex;
+  justify-content: center;
 }

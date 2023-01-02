@@ -1,6 +1,10 @@
 .locale-selector {
   margin: 3rem auto;
+  padding: 2rem;
   width: 20rem;
+  border: 1px solid #734173;
+  border-radius: 8px;
+  background-color: #DB99a4;
 
   &__select-input {
     position: relative;

@@ -8,6 +8,10 @@ Rails.application.routes.draw do
 
   mount SolidusPaypalCommercePlatform::Engine, at: '/solidus_paypal_commerce_platform'
   root to: 'home#index'
+  post '/terms_of_use', to: 'terms_of_use#show'
+  post '/privacy_policy', to: 'privacy_policy#show'
+  get '/privacy_policy', to: 'privacy_policy#show'
+  post '/about_us', to: 'about_us#show'
 
   devise_for(:user, {
     class_name: 'Spree::User',

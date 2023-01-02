@@ -20,8 +20,12 @@
     }
   }
 
+  @media (max-width: 600px) {
+    // display: none;
+  }
+
   a {
-    padding: 8px 24px;
+    padding: 8px 16px;
     height: fit-content;
 
     @include tablet {
@@ -33,7 +37,7 @@
     background-color: #eed9dd;
     text-decoration: none;
     border: solid 1px #772431;
-    border-radius: 10px;
+    border-radius: 16px;
   }
 
   a:visited {
@@ -44,8 +48,9 @@
 
   a:hover {
     color: #772431;
-    background-color: #DBabb3;
+    background-color: #DB99A4;
     transition: all ease .6s;
+    filter: drop-shadow(0 0 18px #DBabb3);
   }
 
   a:active {
