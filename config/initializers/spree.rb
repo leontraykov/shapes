@@ -53,7 +53,9 @@ Spree.config do |config|
 end
 
 Spree::Backend::Config.configure do |config|
-  config.locale = 'en'
+  config.locale = 'es'
+
+  SolidusGlobalize::Config.supported_locales = [:en, :'ru', :'es']
 
   # Uncomment and change the following configuration if you want to add
   # a new menu item:

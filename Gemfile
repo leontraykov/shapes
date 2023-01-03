@@ -78,10 +78,20 @@ end
 
 # FIXME: Please remove this line if `solidus_auth_devise` appears anywhere else in the gemfile
 #        or replace it with a simple `gem 'solidus_auth_devise'` otherwise.
-gem 'solidus_auth_devise' unless File.read(__FILE__).lines[__LINE__..-1].grep(/solidus_auth_devise/).any?
+# gem 'solidus_auth_devise' unless File.read(__FILE__).lines[__LINE__..-1].grep(/solidus_auth_devise/).any?
 
 gem 'solidus_auth_devise'
 gem 'solidus_paypal_commerce_platform'
 gem 'solidus_i18n'
 
 gem "font-awesome-rails", "~> 4.7"
+
+gem 'friendly_id-globalize', github: 'norman/friendly_id-globalize', branch: "master"
+gem 'solidus_globalize', github: 'solidusio-contrib/solidus_globalize'
+
+gem 'globalize'
+
+gem 'rails-i18n'
+gem 'kaminari-i18n', '~> 0.5.0'
+
+gem 'coffee-rails'
