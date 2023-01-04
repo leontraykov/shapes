@@ -8,7 +8,7 @@
 
         <div class="hero__container">
           <p class="hero-subtitle hidden-text hidden">
-            <%#= I18n.t("about_us") %>
+            <%#= I18n.t("about_us_terms") %>
           </p>
         </div>
       </div>
@@ -34,7 +34,7 @@ function parallax() {
   var y = window.pageYOffset;
   var height = section.offsetHeight;
   if (y < height) {
-    section.style.backgroundPosition = '50% ' + (50 + y/10) + '%';
+    section.style.backgroundPosition = '0% ' + (10 + y/10) + '%';
   }
 }
 

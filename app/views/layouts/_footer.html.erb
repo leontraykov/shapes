@@ -55,9 +55,9 @@
     </div>
 
     <div class="terms">
-      <%= button_to I18n.t("privacy_policy"), privacy_policy_url, target:"_blank", class:"footer-link" %>
-      <%= button_to I18n.t("terms_of_use"), terms_of_use_url, target:"_blank", class:"footer-link" %>
-      <%= button_to I18n.t("about_us_title"), about_us_url, target:"_blank", class:"footer-link" %>
+      <%= button_to I18n.t("privacy_policy"), privacy_policy_url, class:"footer-link", form: {target: '_blank'} %>
+      <%= button_to I18n.t("terms_of_use"), terms_of_use_url, class:"footer-link", form: {target: '_blank'} %>
+      <%= button_to I18n.t("about_us"), about_us_url, class:"footer-link", form: {target: '_blank'} %>
     </div>
   </div>
 </footer>
