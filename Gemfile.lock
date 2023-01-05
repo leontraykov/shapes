@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/jtapia/solidus_slider.git
+  revision: a65047138a4ff295c338133d8f35dceb4d05a328
+  specs:
+    solidus_slider (1.0)
+      deface (~> 1.0)
+      solidus_core (>= 2.6, < 4)
+      solidus_support (~> 0.5)
+
+GIT
   remote: https://github.com/norman/friendly_id-globalize.git
   revision: 097eed19e9d2f6bbf5ee7636493c03f7025d813b
   branch: master
@@ -79,6 +88,8 @@ GEM
     activerecord (6.1.7)
       activemodel (= 6.1.7)
       activesupport (= 6.1.7)
+    activerecord-import (1.4.1)
+      activerecord (>= 4.2)
     activestorage (6.1.7)
       actionpack (= 6.1.7)
       activejob (= 6.1.7)
@@ -493,6 +504,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  activerecord-import (~> 1.4)
   apparition (~> 0.6.0)!
   bootsnap (>= 1.4.4)
   byebug
@@ -532,6 +544,7 @@ DEPENDENCIES
   solidus_i18n
   solidus_paypal_commerce_platform
   solidus_sample
+  solidus_slider!
   solidus_support
   spring
   truncate_html

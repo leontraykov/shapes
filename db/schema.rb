@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_03_162831) do
+ActiveRecord::Schema.define(version: 2023_01_04_154354) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -933,6 +933,36 @@ ActiveRecord::Schema.define(version: 2023_01_03_162831) do
     t.datetime "updated_at", precision: 6
     t.integer "tax_rate_id"
     t.index ["shipment_id", "shipping_method_id"], name: "spree_shipping_rates_join_index", unique: true
+  end
+
+  create_table "spree_slide_locations", id: :serial, force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "spree_slide_slide_locations", id: :serial, force: :cascade do |t|
+    t.integer "slide_id"
+    t.integer "slide_location_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["slide_id", "slide_location_id"], name: "index_spree_slide_slide_locations"
+  end
+
+  create_table "spree_slides", id: :serial, force: :cascade do |t|
+    t.string "name"
+    t.text "body"
+    t.string "link_url"
+    t.boolean "published"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer "position", default: 0, null: false
+    t.integer "product_id"
+    t.boolean "show_caption"
   end
 
   create_table "spree_state_changes", id: :serial, force: :cascade do |t|

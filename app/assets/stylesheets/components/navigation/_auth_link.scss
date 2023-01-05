@@ -13,6 +13,40 @@
 }
 
 
+.slide-show {
+  // align-items: center;
+  // display: flex;
+  // flex-flow: row nowrap;
+  // gap: 50px;
+  // justify-content: center;
+}
+
+
+.slide {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 50px;
+  justify-content: center;
+}
+
+.slide-title {
+  display: flex;
+  justify-content: center;
+}
+
+.a-slide {
+  display: flex;
+  flex-flow: row nowrap;
+  img {
+    height: 30em;
+  }
+}
+
+
+
+
+
+
 
 .info-container {
   width: 80%;
