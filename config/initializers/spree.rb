@@ -2,15 +2,30 @@
 # See http://docs.solidus.io/Spree/AppConfiguration.html for details
 
 # Solidus version defaults for preferences that are not overridden
-Spree.load_defaults '3.2.4'
+Spree.load_defaults "3.2.4"
 
 Spree.config do |config|
+
   # Core:
   # Default currency for new sites
   config.currency = "DOP"
 
   # from address for transactional emails
   config.mails_from = "store@example.com"
+
+  Money::Currency.register({
+    :priority        => 1,
+    :symbol_first    => true,
+    :iso_code        => "DOP",
+    :iso_numeric     => 214,
+    :name            => "Dominican Peso",
+    :symbol          => "RD$ ",
+    :subunit         => "Centavo",
+    :subunit_to_unit => 100,
+    :separator       => ".",
+    :delimiter       => ",",
+    :html_entity     => "RD$ "
+  })
 
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
@@ -53,9 +68,9 @@ Spree.config do |config|
 end
 
 Spree::Backend::Config.configure do |config|
-  config.locale = 'es'
+  config.locale = "es"
 
-  SolidusGlobalize::Config.supported_locales = [:'en', :'ru', :'es']
+  SolidusGlobalize::Config.supported_locales = [:"en", :"ru", :"es"]
 
   # Uncomment and change the following configuration if you want to add
   # a new menu item:

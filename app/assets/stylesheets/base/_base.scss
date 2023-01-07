@@ -21,6 +21,12 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+@media (max-width: 900px) {
+  body {
+    width: 100%;
+  }
+}
+
 *,
 *:before,
 *:after {

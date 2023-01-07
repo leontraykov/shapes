@@ -1,4 +1,4 @@
-<div class="tt">
+<div class="top-bar">
   <div class="logo">
     <figure class="logo">
       <%= link_to image_tag("logo.svg"), root_path %>
@@ -6,7 +6,7 @@
   </div>
 
   <div class="cont-part">
-    <div class="row">
+    <div class="row-cont">
       <div class="header-cont-block">
         <div class="ab-us">
           <%= button_to about_us_url, class:"infoe", form: {target: '_blank'} do %>
@@ -40,7 +40,7 @@
       </div>
     </div>
 
-<div class="row">
+<div class="row-search">
   <div class="searchbbar">
     <div class="account">
       <%= render 'shared/search/search_bar', taxons: taxons, taxon: taxon %>
