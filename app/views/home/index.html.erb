@@ -1,8 +1,9 @@
 <%= render 'hero' %>
 
 <br>
-<h1>SHAPES BEST SELLERS</h1>
+<h1><%= t ("top_picks") %></h1>
 <% if Spree::Slide.published.count > 0 %>
+<%#debugger%>
   <section id="slideshow">
     <ul class="slide">
       <% Spree::Slide.published.order('position ASC').each do |s| %>
@@ -18,13 +19,13 @@
 <% end %>
 
 <br>
-<h1>Find yours especial</h1>
+<h1><%= t ("recomended_trending") %></h1>
 <article>
   <% cache(cache_key_for_products) do %>
     <%= render 'products/products', products: @products %>
   <% end %>
 </article>
 
-<%#= render 'carousel' %>
+<%= render 'carousel' %>
 
 <%= render 'for_them' %>

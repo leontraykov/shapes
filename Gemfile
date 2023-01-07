@@ -38,6 +38,11 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'capistrano', require: false #, '~> 3.11'
+  gem 'capistrano-rails', require: false #, '~> 1.4'
+  gem 'capistrano-passenger', require: false #, '~> 0.2.0'
+  gem 'capistrano-rbenv', require: false #, '~> 2.1', '>= 2.1.4'
+  gem 'capistrano-bundler', require: false
 end
 
 group :test do
@@ -99,8 +104,3 @@ gem 'coffee-rails'
 gem 'solidus_slider', github: 'jtapia/solidus_slider'
 
 gem "activerecord-import", "~> 1.4"
-
-gem 'capistrano', '~> 3.11'
-gem 'capistrano-rails', '~> 1.4'
-gem 'capistrano-passenger', '~> 0.2.0'
-gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'

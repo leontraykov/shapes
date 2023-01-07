@@ -11,6 +11,8 @@ es:
   learn_more: "Aprende más"
   privacy_policy: "Política de privacidad"
   terms_of_use: "Términos de Uso"
+  top_picks: "Nuestras Recomendaciones Para Usted"
+  recomended_trending: "Tendencias recomendadas"
   activemodel:
     attributes:
       spree/order_cancellations:
