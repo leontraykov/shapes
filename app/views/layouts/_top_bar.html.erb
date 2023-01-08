@@ -1,3 +1,4 @@
+<!--
 <div class="top-bar">
   <div class="logo">
     <figure class="logo">
@@ -40,31 +41,98 @@
       </div>
     </div>
 
-<div class="row-search">
-  <div class="searchbbar">
-    <div class="account">
-      <%= render 'shared/search/search_bar', taxons: taxons, taxon: taxon %>
-    </div>
-  </div>
-  <div class="account">
-    <% if spree_current_user %>
-      <%= link_to I18n.t('spree.my_account'), account_path, class: 'auth-link' %>
-    <% else %>
-      <%= link_to I18n.t('spree.login'), login_path, class: 'auth-link' %>
-    <% end %>
-  </div>
-  <div class="cart">
-    <div class="cart-link" id="link-to-cart">
-      <noscript>
-        <%= link_to t('spree.cart'), edit_cart_path %>
-      </noscript>
+    <div class="row-search">
+      <div class="searchbbar">
+        <div class="account">
+          <%= render 'shared/search/search_bar', taxons: taxons, taxon: taxon %>
+        </div>
+      </div>
+      <div class="account">
+        <% if spree_current_user %>
+          <%= link_to I18n.t('spree.my_account'), account_path, class: 'auth-link' %>
+        <% else %>
+          <%= link_to I18n.t('spree.login'), login_path, class: 'auth-link' %>
+        <% end %>
+      </div>
+      <div class="cart">
+        <div class="cart-link" id="link-to-cart">
+          <noscript>
+            <%= link_to t('spree.cart'), edit_cart_path %>
+          </noscript>
+        </div>
+
+        <script>
+          Solidus.fetch_cart('<%= j cart_link_path %>')
+        </script>
+      </div>
     </div>
 
-    <script>
-      Solidus.fetch_cart('<%= j cart_link_path %>')
-    </script>
   </div>
 </div>
+-->
 
+<div class="newheader">
+  <div class="logo">
+    <figure class="logo">
+      <%= link_to image_tag("logo.svg"), root_path %>
+    </figure>
+  </div>
+
+  <div class="empty">
+  </div>
+
+  <div class="cont-part">
+    <div class="top-row">
+      <div class="info">
+        <%= button_to about_us_url, class:"infoe", form: {target: '_blank'} do %>
+          <i class="fa fa-info fa-2x", title=<%= I18n.t("about_us") %> ></i>
+        <% end %>
+      </div>
+
+      <div class="mail">
+        <div class="email">
+          <a href = "mailto: shapesrd@gmail.com", target="_blank", title="Email"><i class="fa fa-envelope fa-2x"></i></a>
+        </div>
+      </div>
+
+      <div class="insta">
+        <div class="insta">
+          <a href="https://www.instagram.com/shapesboutique.rd/", target="_blank", title="Instagram"><i class="fa fa-instagram fa-2x"></i></a>
+        </div>
+      </div>
+
+      <div class="whatsapp">
+        <a href="https://api.whatsapp.com/send?phone=18097393822", target="_blank", title="Whatsapp"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="map">
+        <a href="https://goo.gl/maps/nNzZTxF1YEMm8aKD7", target="_blank", title="Googlemaps"><i class="fa fa-map-marker fa-2x"></i></a>
+      </div>
+    </div>
+    <div class="bottom-row">
+      <div class="search">
+        <%= render 'shared/search/search_bar', taxons: taxons, taxon: taxon %>
+      </div>
+
+      <div class="account">
+        <% if spree_current_user %>
+          <%= link_to I18n.t('spree.my_account'), account_path, class: 'auth-link' %>
+        <% else %>
+          <%= link_to I18n.t('spree.login'), login_path, class: 'auth-link' %>
+        <% end %>
+      </div>
+
+      <div class="cart">
+        <div class="cart-link" id="link-to-cart">
+          <noscript>
+            <%= link_to t('spree.cart'), edit_cart_path %>
+          </noscript>
+        </div>
+
+        <script>
+          Solidus.fetch_cart('<%= j cart_link_path %>')
+        </script>
+      </div>
+    </div>
   </div>
 </div>

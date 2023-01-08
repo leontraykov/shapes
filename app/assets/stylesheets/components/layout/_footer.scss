@@ -13,7 +13,7 @@
 .my-footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .my-contacts {
@@ -33,7 +33,7 @@
 .terms {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 25%;
   // margin: 2em 0;
 }
