@@ -272,7 +272,7 @@
 
 
 .brands-carousel {
-  max-width: 75rem;
+  max-width: 80%;
   max-height: fit-content;
   margin: 4em auto;
   padding: 0 1.25rem;
@@ -339,7 +339,6 @@ ol, li {
   width: 100%;
   background-color: #b76e7a;
   counter-increment: item;
-  
 }
 
 .carousel__slide:nth-child(even) {

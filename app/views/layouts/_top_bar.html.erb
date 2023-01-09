@@ -83,31 +83,57 @@
 
   <div class="cont-part">
     <div class="top-row">
-      <div class="info">
-        <%= button_to about_us_url, class:"infoe", form: {target: '_blank'} do %>
-          <i class="fa fa-info fa-2x", title=<%= I18n.t("about_us") %> ></i>
-        <% end %>
+
+      <div class="tooltip">
+        <span><%= button_to about_us_url, class:"infoe", form: {target: '_blank'} do %>
+            <i class="fa fa-info fa-2x" ></i>
+          <% end %>
+        </span>
+
+          <div class="tooltip-text"><%= I18n.t("about_us") %></div>
       </div>
 
-      <div class="mail">
-        <div class="email">
-          <a href = "mailto: shapesrd@gmail.com", target="_blank", title="Email"><i class="fa fa-envelope fa-2x"></i></a>
-        </div>
+      <div class="tooltip">
+        <span>
+          <div class="email">
+            <a href = "mailto: shapesrd@gmail.com", target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
+          </div>
+        </span>
+
+          <div class="tooltip-text"><%= I18n.t("email") %></div>
       </div>
 
-      <div class="insta">
-        <div class="insta">
-          <a href="https://www.instagram.com/shapesboutique.rd/", target="_blank", title="Instagram"><i class="fa fa-instagram fa-2x"></i></a>
-        </div>
+      <div class="tooltip">
+        <span>
+          <div class="insta">
+            <a href="https://www.instagram.com/shapesboutique.rd/", target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+          </div>
+        </span>
+
+          <div class="tooltip-text"><%= I18n.t("instagram") %></div>
       </div>
 
-      <div class="whatsapp">
-        <a href="https://api.whatsapp.com/send?phone=18097393822", target="_blank", title="Whatsapp"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a>
+      <div class="tooltip">
+        <span>
+          <div class="whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=18097393822", target="_blank"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a>
+          </div>
+        </span>
+
+          <div class="tooltip-text"><%= I18n.t("whatsapp") %></div>
       </div>
 
-      <div class="map">
-        <a href="https://goo.gl/maps/nNzZTxF1YEMm8aKD7", target="_blank", title="Googlemaps"><i class="fa fa-map-marker fa-2x"></i></a>
+      <div class="tooltip">
+        <span>
+          <div class="map">
+            <a href="https://goo.gl/maps/nNzZTxF1YEMm8aKD7", target="_blank"><i class="fa fa-map-marker fa-2x"></i></a>
+          </div>
+        </span>
+
+          <div class="tooltip-text"><%= I18n.t("googlemaps") %></div>
       </div>
+
+
     </div>
     <div class="bottom-row">
       <div class="search">

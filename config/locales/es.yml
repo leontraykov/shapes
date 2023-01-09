@@ -13,6 +13,10 @@ es:
   terms_of_use: "Términos de Uso"
   top_picks: "Nuestras Recomendaciones Para Usted"
   recomended_trending: "Tendencias recomendadas"
+  email: "Email"
+  instagram: "Instagram"
+  googlemaps: "Mapa"
+  whatsapp: "Whatsapp"
   activemodel:
     attributes:
       spree/order_cancellations:

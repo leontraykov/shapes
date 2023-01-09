@@ -1,0 +1,18 @@
+<br>
+<h1><%= t ("top_picks") %></h1>
+<% if Spree::Slide.published.count > 0 %>
+<%#debugger%>
+  <section id="slideshow">
+    <ul class="slide">
+      <% Spree::Slide.published.order('position ASC').each do |s| %>
+        <li>
+          <h1 class="slide-title"><%= s.slide_caption %></h1>
+          <%= link_to image_tag(s.slide_image.url), url_for(s.slide_link), class:"a-slide" %>
+        </li>
+      <% end %>
+    </ul>
+    <!-- <a title="<% t(:previous) %>" class="slider-prev"><%= t(:previous)%></a>
+    <a title="<% t(:next) %>" class="slider-next"><%= t(:next) %></a> -->
+  </section>
+<% end %>
+<br>

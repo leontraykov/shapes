@@ -1,80 +1,43 @@
-// .top-bar {
-//   background-image: linear-gradient(to right,white, #DBABB3);
-//   align-items: center;
-//   display: flex;
-//   flex-wrap: nowrap;
-//   justify-content: space-between;
-//   padding: 1rem;
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
 
-//   @include desktop {
-//     flex-wrap: nowrap;
-//     justify-content: flex-end;
-//   }
+.tooltip-text {
+  padding: 6px;
+  background-color: #333;
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+  left: -120px;
+  bottom: 14px;
+  visibility: hidden;
+}
 
-//   .logo {
-//     margin: 0 0;
-//     order: 1;
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: 12px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 10px solid #333;
+}
 
-//     a {
-//       display: flex;
-//     }
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
 
-//     img {
-//       width: 300px;
-
-//       @media (max-width: 600px) {
-//         width: 180px;
-//       }
-//       @media (max-width: 500px) {
-//         width: 90px;
-//       }
-//     }
-//   }
-
-//   &__search {
-//     flex: 0 0 100%;
-//     margin-top: 10px;
-//     order: 4;
-
-//     @include desktop {
-//       flex: 1 0 auto;
-//       margin: 0 2rem;
-//       order: 2;
-//     }
-//   }
-
-//   .auth-link {
-//     order: 2;
-//   }
-
-//   .cart-link {
-//     order: 3;
-//   }
-// }
-
-
-// .logo {
-//   width: auto;
-//   margin: 0 0;
-
-//   img {
-//     width: 300px;
-
-//   //   @media (max-width: 600px) {
-//   //     width: 180px;
-//   //   }
-//   //   @media (max-width: 500px) {
-//   //     width: 90px;
-//   //   }
-//  }
-// }
-
-.logo {
-  display: flex;
+.advert {
+  margin-bottom: 1rem;
   img {
-    width: 300px;
-    justify-content: flex-start;
-
+    width: 100%;
+    max-height: 200px;
   }
 }
 
@@ -89,6 +52,15 @@
   width: auto;
   display: flex;
   flex-flow: column nowrap;
+}
+
+.logo {
+  display: flex;
+  img {
+    width: 300px;
+    justify-content: flex-start;
+
+  }
 }
 
 .logo, .cont-part {
@@ -198,7 +170,6 @@
   order: -1;
   // border: 2px solid black;
   width: 30%;
-  justify-content: flex-end;
 }
 .empty {
   width: 30%;
