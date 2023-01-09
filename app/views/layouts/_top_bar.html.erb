@@ -148,6 +148,20 @@
         <% end %>
       </div>
 
+<!--
+      <div class="account">
+        <% if spree_current_user %>
+          <%= link_to account_path, class: 'auth-link' do %>
+            <i class="fa fa-2x fa-user"></i>
+
+          <% end %>
+        <% else %>
+          <%= link_to login_path, class: 'auth-link' do %>
+            <i class="fa fa-2x fa-sign-in"></i>
+          <% end %>
+        <% end %>
+      </div>
+-->
       <div class="cart">
         <div class="cart-link" id="link-to-cart">
           <noscript>

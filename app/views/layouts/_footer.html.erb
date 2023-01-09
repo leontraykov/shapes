@@ -48,13 +48,9 @@
         </div>
       <% end %>
 
-      <p class="designed-by">
-        <%= t "designed_by" %>
-      </p>
-
-      <p class="designed-by">
-        All rights reserved &copy; SHAPES STORE
-      </p>
+    <p class="designed-by">
+      SHAPES STORE &copy; All rights reserved
+    </p>
     </div>
 
     <div class="terms">
@@ -63,4 +59,8 @@
       <%= button_to I18n.t("about_us"), about_us_url, class:"footer-link", form: {target: '_blank'} %>
     </div>
   </div>
+
+      <p class="designed-by">
+        <%= t "designed_by" %>
+      </p>
 </footer>

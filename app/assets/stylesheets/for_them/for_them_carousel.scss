@@ -32,9 +32,9 @@
 
   margin-top: -50px;
   color: #5E1C4C;
-  -webkit-text-stroke: .03em #dbabb3;
+  -webkit-text-stroke: .02em #dbabb3;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 30px;
   border-radius: 60px;
   user-select: none;
   -webkit-user-select: none;
@@ -51,9 +51,8 @@
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: #DB99A4;
-  color: #5E1C4C;
-
+  color: #dbabb3;
+  -webkit-text-stroke: .08em #5E1C4C;
 }
 
 /* Container for image text */
@@ -69,7 +68,7 @@
 }
 
 .row {
-  margin: 2rem 0 2rem 10%;
+  margin: 2rem 0 2rem 7%;
   display: flex;
   justify-content: space-around;
 }
@@ -97,7 +96,7 @@
 }
 
 .slider-image {
-  width: 50%;
+  width: 75%;
   justify-content: center;
 }
 
