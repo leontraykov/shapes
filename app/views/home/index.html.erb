@@ -2,9 +2,12 @@
 
 <%= render 'hero' %>
 
+<h1 class="heading"><%= t ("top_picks") %></h1>
+
 <%= render 'slider' %>
 
-<h1><%= t ("recomended_trending") %></h1>
+<h1 class="heading"><%= t ("recomended_trending") %></h1>
+
 <article>
   <% cache(cache_key_for_products) do %>
     <%= render 'products/products', products: @products %>

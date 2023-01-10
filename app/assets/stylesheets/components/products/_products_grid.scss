@@ -7,6 +7,11 @@
   margin: 0 auto;
   max-width: 114rem;
   padding: 3rem;
+  img {
+    width: auto;
+    height: 20em;
+    justify-content: space-around;
+  }
 
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
@@ -15,4 +20,8 @@
   @include desktop {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+.product-card_image {
+  display: flex;
+  justify-content: space-around;
 }

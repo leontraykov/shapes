@@ -82,6 +82,9 @@
 .slide-title {
   display: flex;
   justify-content: center;
+  font-weight: lighter;
+  font-style: italic;
+  text-decoration: underline;
 }
 
 .a-slide {
@@ -166,7 +169,7 @@
 
 .brands-carousel {
   max-width: 80%;
-  max-height: fit-content;
+  // max-height: fit-content;
   margin: 4em auto;
   padding: 0 1.25rem;
   font-family: 'Lato', sans-serif;

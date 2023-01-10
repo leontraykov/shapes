@@ -78,7 +78,7 @@
     </figure>
   </div>
 
-  <div class="empty">
+  <div class="middle-section">
   </div>
 
   <div class="cont-part">
@@ -134,12 +134,13 @@
       </div>
 
 
+
     </div>
     <div class="bottom-row">
       <div class="search">
         <%= render 'shared/search/search_bar', taxons: taxons, taxon: taxon %>
       </div>
-
+<!--
       <div class="account">
         <% if spree_current_user %>
           <%= link_to I18n.t('spree.my_account'), account_path, class: 'auth-link' %>
@@ -147,21 +148,27 @@
           <%= link_to I18n.t('spree.login'), login_path, class: 'auth-link' %>
         <% end %>
       </div>
-
-<!--
-      <div class="account">
-        <% if spree_current_user %>
-          <%= link_to account_path, class: 'auth-link' do %>
-            <i class="fa fa-2x fa-user"></i>
-
-          <% end %>
-        <% else %>
-          <%= link_to login_path, class: 'auth-link' do %>
-            <i class="fa fa-2x fa-sign-in"></i>
-          <% end %>
-        <% end %>
-      </div>
 -->
+      <div class="account">
+        <div class="tooltip-bottom">
+          <% if spree_current_user %>
+              <span>
+                <%= link_to account_path, class: 'auth-link' do %>
+                  <i class="fa fa-2x fa-user"></i>
+                <% end %>
+              </span>
+              <div class="tooltip-bottom-text"><%= I18n.t("spree.my_account") %></div>
+          <% else %>
+              <span>
+                <%= link_to login_path, class: 'auth-link' do %>
+                  <i class="fa fa-2x fa-sign-in"></i>
+                <% end %>
+              </span>
+              <div class="tooltip-bottom-text"><%= I18n.t("spree.login") %></div>
+          <% end %>
+        </div>
+      </div>
+
       <div class="cart">
         <div class="cart-link" id="link-to-cart">
           <noscript>
