@@ -24,7 +24,8 @@
 
 .ft-title-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-left: 2rem;
 }
 .ft-title {
   margin: 1rem;
@@ -54,6 +55,9 @@
   // background-size: cover;
   background-image: linear-gradient(white, #DBABB3);
   // background-position: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 
@@ -75,7 +79,7 @@
 .slide {
   display: flex;
   flex-flow: row nowrap;
-  gap: 50px;
+  gap: 4%;
   justify-content: center;
 }
 
@@ -83,6 +87,7 @@
   display: flex;
   justify-content: center;
   font-weight: lighter;
+  font-size: 1.8rem;
   font-style: italic;
   text-decoration: underline;
 }
@@ -92,6 +97,7 @@
   flex-flow: row nowrap;
   img {
     height: 30em;
+    width: auto;
   }
 }
 
@@ -427,6 +433,30 @@ div.desc {
 @media only screen and (max-width: 500px) {
   .responsive {
     width: 100%;
+  }
+  .a-slide {
+    img {
+      height: 18rem;
+      width: auto;
+    }
+  }
+  .heading {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  .recomendations {
+    margin-top: 2rem;
+  }
+  .ft-title-container {
+    justify-content: center;
+    margin-left: 0;
+  }
+  .ft-title {
+    font-size: 3rem;
+    
+  }
+  .ft-subtitle {
+    order: 1;
   }
 }
 
