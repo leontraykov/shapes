@@ -226,7 +226,7 @@
   }
 
   .search {
-    flex-grow: 1;
+    // flex-grow: 1;
   }
 }
 .bottom-row {
@@ -308,11 +308,18 @@
       width: 150px;
     }
   }
+  .categories a {
+    display: flex;
+    justify-content: center;
+  }
 
   .top-row {
     padding-top: 10px;
   }
 
+  .search {
+    flex-grow: 0;
+  }
   .search-bar__button {
     svg {
       height: 16px;
@@ -341,8 +348,17 @@
     margin-right: 5px;
   }
   .bottom-row {
+    justify-content: space-around;
     margin-right: 0;
     align-items: baseline;
+  }
+
+  .category-navigation {
+    padding: 0;
+  }
+  .categories__list {
+    flex-wrap: wrap;
+    font-size: .5rem;
   }
   .search {
     margin-right: 10px;
