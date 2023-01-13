@@ -71,3 +71,7 @@ gem 'kaminari-i18n', '~> 0.5.0'
 gem 'coffee-rails'
 gem 'solidus_slider', github: 'jtapia/solidus_slider'
 gem "activerecord-import", "~> 1.4"
+
+gem 'jquery-rails'
+gem "jquery-slick-rails"
+gem 'turbolinks', '~> 5.2.0'

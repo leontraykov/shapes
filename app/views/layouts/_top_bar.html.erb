@@ -1,76 +1,3 @@
-<!--
-<div class="top-bar">
-  <div class="logo">
-    <figure class="logo">
-      <%= link_to image_tag("logo.svg"), root_path %>
-    </figure>
-  </div>
-
-  <div class="cont-part">
-    <div class="row-cont">
-      <div class="header-cont-block">
-        <div class="ab-us">
-          <%= button_to about_us_url, class:"infoe", form: {target: '_blank'} do %>
-            <i class="fa fa-info fa-2x", title=<%= I18n.t("about_us") %> ></i>
-          <% end %>
-          
-        </div>
-      </div>
-
-      <div class="header-cont-block">
-        <div class="email">
-          <a href = "mailto: shapesrd@gmail.com", target="_blank", title="Email"><i class="fa fa-envelope fa-2x"></i></a>
-        </div>
-      </div>
-
-      <div class="header-cont-block">
-        <div class="insta">
-          <a href="https://www.instagram.com/shapesboutique.rd/", target="_blank", title="Instagram"><i class="fa fa-instagram fa-2x"></i></a>
-        </div>
-      </div>
-      <div class="header-cont-block">
-        <div class="watsapp">
-          <a href="https://api.whatsapp.com/send?phone=18097393822", target="_blank", title="Whatsapp"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a>
-        </div>
-      </div>
-
-      <div class="header-cont-block">
-        <div class="address">
-          <a href="https://goo.gl/maps/nNzZTxF1YEMm8aKD7", target="_blank", title="Googlemaps"><i class="fa fa-map-marker fa-2x"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="row-search">
-      <div class="searchbbar">
-        <div class="account">
-          <%= render 'shared/search/search_bar', taxons: taxons, taxon: taxon %>
-        </div>
-      </div>
-      <div class="account">
-        <% if spree_current_user %>
-          <%= link_to I18n.t('spree.my_account'), account_path, class: 'auth-link' %>
-        <% else %>
-          <%= link_to I18n.t('spree.login'), login_path, class: 'auth-link' %>
-        <% end %>
-      </div>
-      <div class="cart">
-        <div class="cart-link" id="link-to-cart">
-          <noscript>
-            <%= link_to t('spree.cart'), edit_cart_path %>
-          </noscript>
-        </div>
-
-        <script>
-          Solidus.fetch_cart('<%= j cart_link_path %>')
-        </script>
-      </div>
-    </div>
-
-  </div>
-</div>
--->
-
 <div class="newheader">
   <div class="logo">
     <figure class="logo">
@@ -86,7 +13,7 @@
 
       <div class="tooltip">
         <span><%= button_to about_us_url, class:"infoe", form: {target: '_blank'} do %>
-            <i class="fa fa-info fa-2x" ></i>
+            <i class="fa fa-info fa-2x icon-size"></i>
           <% end %>
         </span>
 
@@ -96,7 +23,7 @@
       <div class="tooltip">
         <span>
           <div class="email">
-            <a href = "mailto: shapesrd@gmail.com", target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
+            <a href = "mailto: shapesrd@gmail.com", target="_blank"><i class="fa fa-envelope fa-2x icon-size"></i></a>
           </div>
         </span>
 
@@ -106,7 +33,7 @@
       <div class="tooltip">
         <span>
           <div class="insta">
-            <a href="https://www.instagram.com/shapesboutique.rd/", target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+            <a href="https://www.instagram.com/shapesboutique.rd/", target="_blank"><i class="fa  icon-size fa-instagram fa-2x"></i></a>
           </div>
         </span>
 
@@ -116,7 +43,7 @@
       <div class="tooltip">
         <span>
           <div class="whatsapp">
-            <a href="https://api.whatsapp.com/send?phone=18097393822", target="_blank"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=18097393822", target="_blank"><i class="fa icon-size fa-whatsapp fa-2x" aria-hidden="true"></i></a>
           </div>
         </span>
 
@@ -126,7 +53,7 @@
       <div class="tooltip">
         <span>
           <div class="map">
-            <a href="https://goo.gl/maps/nNzZTxF1YEMm8aKD7", target="_blank"><i class="fa fa-map-marker fa-2x"></i></a>
+            <a href="https://goo.gl/maps/nNzZTxF1YEMm8aKD7", target="_blank"><i class="fa icon-size fa-map-marker fa-2x"></i></a>
           </div>
         </span>
 
@@ -154,7 +81,7 @@
           <% if spree_current_user %>
               <span>
                 <%= link_to account_path, class: 'auth-link' do %>
-                  <i class="fa fa-2x fa-user"></i>
+                  <i class="fa icon-size fa-2x fa-user"></i>
                 <% end %>
               </span>
               <div class="tooltip-bottom-text"><%= I18n.t("spree.my_account") %></div>

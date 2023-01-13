@@ -1,10 +1,14 @@
+<% content_for :head do %>
+  <meta name="turbolinks-cache-control" content="no-cache">
+<% end %>
+
 <%= render 'advert' %>
 
 <%= render 'hero' %>
 
 <h1 class="heading recomendations"><%= t ("top_picks") %></h1>
 
-<%= render 'slider' %>
+<%= render partial: 'spree/shared/slider', locals: { slider: Spree::Slide.published, cid: 'home' } %>
 
 <h1 class="heading"><%= t ("recomended_trending") %></h1>
 

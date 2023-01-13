@@ -13,3 +13,7 @@
 //= require cart
 //= require locale_selector
 //= require product_selection_component
+//= require jquery3
+//= require jquery.slick
+//= require initialize
+//= require turbolinks
