@@ -1,0 +1,18 @@
+<% if slider.size > 0 %>
+  <div class="slider2">
+    <% slider.each_with_index do |slide, index| %>
+      <div class="item">
+        <%= link_to image_tag(slide.slide_image.url, alt: slide.slide_caption, class:'img-responsive slider-img'), url_for(slide.slide_link) %>
+
+        <div>
+          <% if slide.show_caption? %>
+            <h3><%= slide.slide_caption %></h3>
+          <% end %>
+          <% unless slide.body.blank? %>
+            <p><%= slide.body %><p>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

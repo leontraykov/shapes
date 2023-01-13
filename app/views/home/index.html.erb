@@ -8,9 +8,13 @@
 
 <h1 class="heading recomendations"><%= t ("top_picks") %></h1>
 
-<%= render partial: 'spree/shared/slider', locals: { slider: Spree::Slide.published, cid: 'home' } %>
+<% slides2 = Spree::Slide.published.location("recomendations") %>
+<%= render partial: 'spree/shared/slider_recomendations', locals: { slider: slides2 } %>
 
 <h1 class="heading"><%= t ("recomended_trending") %></h1>
+
+<% slides = Spree::Slide.published.location("trends") %>
+<%= render partial: 'spree/shared/slider_trends', locals: { slider: slides } %>
 
 <article>
   <% cache(cache_key_for_products) do %>
