@@ -16,7 +16,7 @@
 <% slides = Spree::Slide.published.location("trends") %>
 <%= render partial: 'spree/shared/slider_trends', locals: { slider: slides } %>
 
-<article>
+<article class="prod-mid">
   <% cache(cache_key_for_products) do %>
     <%= render 'products/products', products: @products %>
   <% end %>

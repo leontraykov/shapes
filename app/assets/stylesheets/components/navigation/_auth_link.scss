@@ -112,6 +112,14 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+.prod-mid {
+  text-align: -moz-center;
+
+}
+.category-navigation {
+  display: flex;
+  justify-content: space-around;
+}
 
 @keyframes tonext {
   75% {
