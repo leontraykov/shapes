@@ -293,6 +293,11 @@
   .search {
     width: 30%;
   }
+  .categories a {
+    display: flex;
+    justify-content: center;
+  }
+
 }
 
 /* Media query styles for small screens */
@@ -313,6 +318,10 @@
     justify-content: center;
   }
 
+  .slider-img {
+    height: 20rem;
+  }
+
   .top-row {
     padding-top: 10px;
   }
@@ -325,6 +334,9 @@
       height: 16px;
       width: 16px;
     }
+  }
+  .products-grid {
+    justify-content: center;
   }
 
   .search-bar__button {

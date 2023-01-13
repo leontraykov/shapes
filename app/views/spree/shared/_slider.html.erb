@@ -2,7 +2,7 @@
   <div class="scroller">
     <% slider.each_with_index do |slide, index| %>
       <div class="item">
-        <%= link_to image_tag(slide.slide_image.url, alt: slide.slide_caption, class:'img-responsive'), url_for(slide.slide_link) %>
+        <%= link_to image_tag(slide.slide_image.url, alt: slide.slide_caption, class:'img-responsive slider-img'), url_for(slide.slide_link) %>
 
         <div>
           <% if slide.show_caption? %>
