@@ -47,6 +47,12 @@
     }
   }
 
+  @media (min-width: 900px) {
+    a {
+      padding: 8px 16px;
+    }
+  }
+
   a:link {
     background-color: #eed9dd;
     text-decoration: none;
