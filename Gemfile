@@ -75,4 +75,4 @@ gem "activerecord-import", "~> 1.4"
 gem 'jquery-rails'
 gem "jquery-slick-rails"
 gem 'turbolinks', '~> 5.2.0'
-gem "aws-sdk-s3", require: false
+gem "aws-sdk-s3"
