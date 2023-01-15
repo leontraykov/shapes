@@ -17,7 +17,9 @@
 <%= render partial: 'spree/shared/slider_trends', locals: { slider: slides } %>
 
 <article class="prod-mid">
-  <%= render 'products/products', products: @products %>
+  <% cache(cache_key_for_products) do %>
+    <%= render 'products/products', products: @products %>
+  <% end %>
 </article>
 
 <%= render 'carousel' %>

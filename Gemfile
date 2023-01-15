@@ -23,6 +23,8 @@ group :development do
   gem 'capistrano-passenger', require: false #, '~> 0.2.0'
   gem 'capistrano-rbenv', require: false #, '~> 2.1', '>= 2.1.4'
   gem 'capistrano-bundler', require: false
+  gem "bcrypt_pbkdf", require: false
+  gem "ed25519", require: false
 end
 
 group :test do
