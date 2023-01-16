@@ -14,3 +14,14 @@
  *= require_self
  *= require font-awesome
  */
+
+ @import "terms_of_use";
+ @import "privacy_policy";
+ @import "about_us";
+
+ .text-block {
+  margin-top: 2rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
