@@ -16,28 +16,16 @@
 <% slides = Spree::Slide.published.location("trends") %>
 <%= render partial: 'spree/shared/slider_trends', locals: { slider: slides } %>
 
+
+<h1 class="heading"><%= t "main_products" %></h1>
+
 <article class="prod-mid">
   <% cache(cache_key_for_products) do %>
     <%= render 'products/products', products: @products %>
   <% end %>
 </article>
 
-<div class="videos">
-  <div class="embed-responsive embed-responsive-16by9 video">
-    <iframe class="emed-responsive-item" src="https://youtube.com/watch?v=ZyhrYis509A&feature=shares" allowfullscreen></iframe>
-    <p class="__heading">Heading for video</p>
-  </div>
-
-  <div class="embed-responsive embed-responsive-16by9 video">
-    <iframe class="embed-responsive-item" src="https://youtube.com/watch?v=ZyhrYis509A&feature=shares" allowfullscreen></iframe>
-    <p class="__heading">Heading for video</p>
-  </div>
-
-  <div class="embed-responsive embed-responsive-16by9 video">
-    <iframe class="embed-responsive-item" src="https://youtube.com/watch?v=ZyhrYis509A&feature=shares" allowfullscreen></iframe>
-    <p class="__heading">Heading for video</p>
-  </div>
-</div>
+<%= render 'videos' %>
 
 <%= render 'carousel' %>
 

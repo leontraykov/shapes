@@ -17,6 +17,9 @@ es:
   instagram: "Instagram"
   googlemaps: "Mapa"
   whatsapp: "Whatsapp"
+  fashion_afvice: "Consejos De Moda"
+  main_products: "Nuestros productos principales"
+  social_life: "Vida social"
   activemodel:
     attributes:
       spree/order_cancellations:
