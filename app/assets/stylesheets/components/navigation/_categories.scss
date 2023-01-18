@@ -1,3 +1,8 @@
+.header__primary-navigation {
+  border-bottom: 14px solid #B76E7A;
+  margin-bottom: 14px;
+}
+
 .heading {
   padding: 10px 0 2em 2em;
   margin-left: 2em;
@@ -5,6 +10,9 @@
 }
 
 .categories {
+  width: 100%;
+  // border-bottom: 14px solid #B76E7A;
+
   &__list {
     display: flex;
     justify-content: center;
@@ -54,7 +62,8 @@
   }
 
   a:link {
-    background-color: #eed9dd;
+    // background-color: #eed9dd;
+    font-weight: 600;
     text-decoration: none;
     border: solid 1px #772431;
     border-radius: 16px;
@@ -71,7 +80,7 @@
 
   a:hover {
     color: #772431;
-    background-color: #DB99A4;
+    background-color: #DBabb3;
     transition: all ease .6s;
     filter: drop-shadow(0 0 18px #DBabb3);
   }
@@ -80,5 +89,12 @@
     color: #772431;
     background-color: transparent;
     text-decoration: underline;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .header__primary-navigation {
+    border-bottom: 6px solid #B76E7A;
   }
 }

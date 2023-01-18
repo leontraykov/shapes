@@ -19,31 +19,31 @@
   
   &__input {
     width: 19rem;
-    background-color: #DB99a4;
     border: solid 1px #772431;
     border-radius: 16px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     width: 40%;
     flex-grow: 1;
+    color: #772431;
     outline: none;
     padding: 0 1rem;
     -webkit-appearance: none;
   }
 
   &__button {
-    background-color: #DB99a4;
     border: solid 1px #772431;
     border-left: 0px;
     border-radius: 16px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    color: $color-copy-light;
+    color: #772431;
     font-weight: $buttons-font-weight;
     padding: 0 2rem 0 1rem;
+    background-color: #DBabb3;
   }
   &__button:hover {
-    background-color: #B76E7A;
+    // background-color: #DB99a4;
     transition: all ease .6s;
   }
 }
