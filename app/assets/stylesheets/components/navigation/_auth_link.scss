@@ -113,8 +113,8 @@
   flex-wrap: wrap;
 }
 .prod-mid {
-  text-align: -moz-center;
-
+  display: flex;
+  justify-content: center;
 }
 .category-navigation {
   display: flex;
